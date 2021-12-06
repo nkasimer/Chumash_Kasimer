@@ -1,0 +1,2 @@
+\selectlanguage *{hebrew}
+\contentsline {chapter}{פרשת שמות}{1}%

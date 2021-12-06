@@ -1,0 +1,115 @@
+\documentclass[12pt, openany]{book}
+\usepackage[
+paperheight=11in,
+paperwidth=8.5in,
+top=0.5in,
+bottom=0.5in,
+inner=0.25in,
+outer=0.25in,
+marginparsep=0.1in,
+headsep=16pt
+]{geometry}
+
+\newcommand{\texttitle}{ספר שמות}%title_here
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[C]{\texttitle \space\textendash\space \leftmark}
+
+\usepackage{paracol}
+\usepackage{anyfontsize}
+\usepackage{ragged2e}
+\usepackage{polyglossia}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{ragged2e}
+
+\usepackage{array}
+
+\setdefaultlanguage{hebrew}
+\setotherlanguage{english}
+\usepackage{fontspec}
+\setmainfont[BoldFont = {Shlomo semiStam}]{Shlomo}
+\setsansfont{Mekorot-Rashi}
+\newfontfamily\englishfont{EB Garamond}
+
+\newcommand{\threeverse}[5]{
+	\footnotesize{\englishfont #1} & %right column verse #
+	{\normalsize \textbf{#2}} & %hebrew
+	{\small #3} & %targum
+	\beginL \footnotesize{\englishfont #4} \endL& %english
+	\footnotesize{\englishfont #5} %left column verse #
+	\\[4pt]
+	\addtocounter{verse}{1}
+}
+
+\newcommand{\rashi}[2]{
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{\textbf{#1} \textsf{#2}}
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+
+\begin{document}
+\frontmatter
+\pagenumbering{roman}
+
+\title{\texttitle}
+
+\author{}
+
+\date{}
+
+\maketitle
+
+\tableofcontents
+
+\clearpage
+\mainmatter
+\pagenumbering{arabic}
+
+\newcounter{chap}
+\setcounter{chap}{1}
+\newcounter{verse}
+\setcounter{verse}{1}
+\newcounter{sedra}
+\setcounter{sedra}{1}
+
+\begin{longtable}{p{0.05\textwidth} p{0.30\textwidth} p{0.25\textwidth} p{0.3\textwidth} p{0.05\textwidth}}
+	\addcontentsline{toc}{chapter}{פרשת שמות}
+	\threeverse{\textsf{כהן}}{וְאֵ֗לֶּה שְׁמוֹת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל\rashi{ואלה שמות בני ישראל.}{  אַעַ״פִּ שֶׁמְּנָאָן בְּחַיֵּיהֶם בִּשְׁמוֹתָם, חָזַר וּמְנָאָם בְּמִיתָתָם, לְהוֹדִיעַ חִבָּתָם, שֶׁנִּמְשְׁלוּ לְכוֹכָבִים, שֶׁמּוֹצִיאָם וּמַכְנִיסָם בְּמִסְפַּר וּבִשְׁמוֹתָם (שמות רבה), שֶׁנֶּ׳ הַמּוֹצִיא בְמִסְפָּר צְבָאָם לְכֻלָּם בְּשֵׁם יִקְרָא (ישעיהו מ׳): }
+		  הַבָּאִ֖ים מִצְרָ֑יְמָה אֵ֣ת יַעֲקֹ֔ב אִ֥ישׁ וּבֵית֖וֹ בָּֽאוּ׃}{וְאִלֵין שְׁמָהַת בְּנֵי יִשְׂרָאֵל דְעַלוּ לְמִצְרָיִם עִם יַעֲקֹב גְבַר וֶאֱנַשׁ בֵּיתֵהּ עַלוּ:}{Now these are the names of the sons of Israel, who came into Egypt with Jacob; every man came with his household:}{\roman{chap}}
+	\threeverse{\arabic{verse}}{רְאוּבֵ֣ן שִׁמְע֔וֹן לֵוִ֖י וִיהוּדָֽה׃}{רְאוּבֵן שִׁמְעוֹן לֵוִי וִיהוּדָה:}{Reuben, Simeon, Levi, and Judah;}{\arabic{verse}}
+    \threeverse{\arabic{verse}}{יִשָּׂשכָ֥ר זְבוּלֻ֖ן וּבִנְיָמִֽן׃}{יִשָּׂשׂכָר זְבוּלֻן וּבִנְיָמִין:}{Issachar, Zebulun, and Benjamin;}{\arabic{verse}}
+	\threeverse{\arabic{verse}}{דָּ֥ן וְנַפְתָּלִ֖י גָּ֥ד וְאָשֵֽׁר׃}{דָן וְנַפְתָּלִי גָד וְאָשֵׁר:}{Dan and Naphtali, Gad and Asher.}{\arabic{verse}}
+	\threeverse{\arabic{verse}}{וַֽיְהִ֗י כׇּל־נֶ֛פֶשׁ יֹצְאֵ֥י יֶֽרֶךְ־יַעֲקֹ֖ב שִׁבְעִ֣ים נָ֑פֶשׁ וְיוֹסֵ֖ף הָיָ֥ה בְמִצְרָֽיִם׃\rashi{ויוסף היה במצרים.}{ וַהֲלֹא הוּא וּבָנָיו הָיוּ בִּכְלַל שִׁבְעִים, וּמַה בָּא לְלַמְּדֵנוּ? וְכִי לֹא הָיִינוּ יוֹדְעִים שֶׁהוּא הָיָה בְּמִצְרַיִם? אֶלָּא לְהוֹדִיעֲךָ צִדְקָתוֹ שֶׁל יוֹסֵף, הוּא יוֹסֵף הָרוֹעֶה אֶת צֹאן אָבִיו, הוּא יוֹסֵף שֶׁהָיָה בְּמִצְרַיִם, וְנַעֲשָׂה מֶלֶךְ, וְעוֹמֵד בְּצִדְקוֹ (שמות רבה): }}{וַהֲוָה כָּל נַפְשָׁתָא נַפְקֵי יַרְכָּא דְיַעֲקֹב שַׁבְעִין נַפְשָׁן וְיוֹסֵף דַהֲוָה בְּמִצְרָיִם:}{And all the souls that came out of the loins of Jacob were seventy souls; and Joseph was in Egypt already.}{\arabic{verse}}
+	\threeverse{\arabic{verse}}{וַיָּ֤מׇת יוֹסֵף֙ וְכׇל־אֶחָ֔יו וְכֹ֖ל הַדּ֥וֹר הַהֽוּא׃}{וּמִית יוֹסֵף וְכָל אַחוֹהִי וְכֹל דָרָא הַהוּא:}{And Joseph died, and all his brethren, and all that generation.}{\arabic{verse}}
+	\threeverse{\arabic{verse}}{וּבְנֵ֣י יִשְׂרָאֵ֗ל פָּר֧וּ\rashi{פרו.}{  שלא הפילו נשותיהם ולא מתו כשהם קטנים: }וַֽיִּשְׁרְצ֛וּ\rashi{וישרצו.}{ שֶׁהָיוּ יוֹלְדוֹת שִׁשָּׁה בְּכָרֵס אֶחָד (שם): } וַיִּרְבּ֥וּ וַיַּֽעַצְמ֖וּ בִּמְאֹ֣ד מְאֹ֑ד וַתִּמָּלֵ֥א הָאָ֖רֶץ אֹתָֽם׃ }{וּבְנֵי יִשְׂרָאֵל נְפִישׁוּ וְאִתְיַלָדוּ וּסְגִיאוּ וּתְקִיפוּ לַחֲדָא לַחֲדָא וְאִתְמְלִיאַת אַרְעָא מִנְהוֹן:}{And the children of Israel were fruitful, and increased abundantly, and multiplied, and waxed exceeding mighty; and the land was filled with them.}{\arabic{verse}}
+
+%וְאֵ֗לֶּה שְׁמוֹת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל\rashi{ואלה שמות בני ישראל.}{  אַעַ"פִּ שֶׁמְּנָאָן בְּחַיֵּיהֶם בִּשְׁמוֹתָם, חָזַר וּמְנָאָם בְּמִיתָתָם, לְהוֹדִיעַ חִבָּתָם, שֶׁנִּמְשְׁלוּ לְכוֹכָבִים, שֶׁמּוֹצִיאָם וּמַכְנִיסָם בְּמִסְפַּר וּבִשְׁמוֹתָם (שמות רבה), שֶׁנֶּ' "הַמּוֹצִיא בְמִסְפָּר צְבָאָם לְכֻלָּם בְּשֵׁם יִקְרָא" (ישעיהו מ'): } הַבָּאִ֖ים מִצְרָ֑יְמָה אֵ֣ת יַעֲקֹ֔ב אִ֥ישׁ וּבֵית֖וֹ בָּֽאוּ׃ רְאוּבֵ֣ן שִׁמְע֔וֹן לֵוִ֖י וִיהוּדָֽה׃
+%יִשָּׂשכָ֥ר זְבוּלֻ֖ן וּבִנְיָמִֽן׃ דָּ֥ן וְנַפְתָּלִ֖י גָּ֥ד וְאָשֵֽׁר׃ וַֽיְהִ֗י כׇּל־נֶ֛פֶשׁ יֹצְאֵ֥י יֶֽרֶךְ־יַעֲקֹ֖ב שִׁבְעִ֣ים נָ֑פֶשׁ וְיוֹסֵ֖ף הָיָ֥ה בְמִצְרָֽיִם\rashi{ויוסף היה במצרים.}{ וַהֲלֹא הוּא וּבָנָיו הָיוּ בִּכְלַל שִׁבְעִים, וּמַה בָּא לְלַמְּדֵנוּ? וְכִי לֹא הָיִינוּ יוֹדְעִים שֶׁהוּא הָיָה בְּמִצְרַיִם? אֶלָּא לְהוֹדִיעֲךָ צִדְקָתוֹ שֶׁל יוֹסֵף, הוּא יוֹסֵף הָרוֹעֶה אֶת צֹאן אָבִיו, הוּא יוֹסֵף שֶׁהָיָה בְּמִצְרַיִם, וְנַעֲשָׂה מֶלֶךְ, וְעוֹמֵד בְּצִדְקוֹ (שמות רבה): }׃ וַיָּ֤מׇת יוֹסֵף֙ וְכׇל־אֶחָ֔יו וְכֹ֖ל הַדּ֥וֹר הַהֽוּא׃ וּבְנֵ֣י יִשְׂרָאֵ֗ל פָּר֧וּ\rashi{פרו.}{  שלא הפילו נשותיהם ולא מתו כשהם קטנים: } וַֽיִּשְׁרְצ֛וּ\rashi{וישרצו.}{ שֶׁהָיוּ יוֹלְדוֹת שִׁשָּׁה בְּכָרֵס אֶחָד (שם): } וַיִּרְבּ֥וּ וַיַּֽעַצְמ֖וּ בִּמְאֹ֣ד מְאֹ֑ד וַתִּמָּלֵ֥א הָאָ֖רֶץ אֹתָֽם׃
+%&
+%וְאִלֵין שְׁמָהַת בְּנֵי יִשְׂרָאֵל דְעַלוּ לְמִצְרָיִם עִם יַעֲקֹב גְבַר וֶאֱנַשׁ בֵּיתֵהּ עַלוּ: רְאוּבֵן שִׁמְעוֹן לֵוִי וִיהוּדָה:
+%יִשָּׂשׂכָר זְבוּלֻן וּבִנְיָמִין:
+%דָן וְנַפְתָּלִי גָד וְאָשֵׁר:
+%וַהֲוָה כָּל נַפְשָׁתָא נַפְקֵי יַרְכָּא דְיַעֲקֹב שַׁבְעִין נַפְשָׁן וְיוֹסֵף דַהֲוָה בְּמִצְרָיִם:
+%וּמִית יוֹסֵף וְכָל אַחוֹהִי וְכֹל דָרָא הַהוּא:
+%וּבְנֵי יִשְׂרָאֵל נְפִישׁוּ וְאִתְיַלָדוּ וּסְגִיאוּ וּתְקִיפוּ לַחֲדָא לַחֲדָא וְאִתְמְלִיאַת אַרְעָא מִנְהוֹן:
+%&
+%\begin{english}
+%NOW THESE are the names of the sons of Israel, who came into Egypt with Jacob; every man came with his household:
+%Reuben, Simeon, Levi, and Judah;
+%Issachar, Zebulun, and Benjamin;
+%Dan and Naphtali, Gad and Asher.
+%And all the souls that came out of the loins of Jacob were seventy souls; and Joseph was in Egypt already.
+%And Joseph died, and all his brethren, and all that generation. \end{english}\\
+%
+
+\end{longtable}
+	
+
+
+
+\end{document}
