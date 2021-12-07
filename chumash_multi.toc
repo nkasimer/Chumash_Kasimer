@@ -1,2 +1,12 @@
 \selectlanguage *{hebrew}
-\contentsline {chapter}{פרשת שמות}{1}%
+\contentsline {chapter}{פרשת שמות}{1}{}%
+\contentsline {chapter}{פרשת וארא}{28}{}%
+\contentsline {chapter}{פרשת בא}{54}{}%
+\contentsline {chapter}{פרשת בשלח}{82}{}%
+\contentsline {chapter}{פרשת יתרו}{115}{}%
+\contentsline {chapter}{פרשת משפטים}{136}{}%
+\contentsline {chapter}{פרשת תרומה}{168}{}%
+\contentsline {chapter}{פרשת תצוה}{193}{}%
+\contentsline {chapter}{פרשת כיתשא}{219}{}%
+\contentsline {chapter}{פרשת ויקהל}{255}{}%
+\contentsline {chapter}{פרשת פקודי}{274}{}%
