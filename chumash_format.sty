@@ -1,0 +1,139 @@
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{paracol}
+%\usepackage{anyfontsize}
+\usepackage{polyglossia}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{ragged2e}
+\usepackage[marginal]{footmisc}
+\usepackage{fontspec}
+\usepackage{array}
+
+%\let\footnoterule\relax
+\renewcommand{\footnoterule}{%
+	\kern -3pt
+	\hrule width \textwidth height 1pt
+	\kern 2pt
+}
+\setdefaultlanguage{hebrew}
+\setotherlanguage{english}
+\setmainfont[BoldFont = {Shlomo semiStam}]{Shlomo}
+\setsansfont{Mekorot-Rashi}
+\newfontfamily\englishfont{EB Garamond}
+
+\usepackage{unnumberedtotoc}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\newcommand{\threeverse}[5]{
+	%\marginpar{\raggedright \footnotesize{\englishfont #1}}
+	%\marginpar{\raggedleft \footnotesize{\englishfont #5}}
+	%
+	%\begin{longtable}{p{0.05\textwidth} m{0.3\textwidth} m{0.25\textwidth} m{0.3\textwidth} p{0.1\textwidth}}
+	\begin{longtable}{m{0.08\textwidth} m{0.30\textwidth} m{0.25\textwidth} m{0.30\textwidth} m{0.08\textwidth}}
+	\parbox{.08\textwidth}{\raggedright \footnotesize{\englishfont #1}} & %right column verse #
+	\parbox{0.3\textwidth} %hebrew
+	{\normalsize \textbf{#2}} &
+	\parbox{0.25\textwidth} %aramaic
+	{\small #3} & 
+	\parbox{0.3\textwidth} %english
+	{\vspace{0pt}\raggedright\beginL %english
+		\footnotesize{\englishfont #4} \endL %english
+	}
+ & 
+	\footnotesize{\englishfont \raggedleft #5} %left column verse #
+	\end{longtable}
+\vspace{-14pt}
+	%\\[4pt]
+	\addtocounter{verse}{1}
+	\addtocounter{footnote}{1}
+}
+
+\newcommand{\twoverse}[3]{
+	\begin{longtable}{m{0.45\textwidth} m{0.08\textwidth} m{0.45\textwidth}}
+	\parbox{0.45\textwidth}%english
+	{\vspace{0pt}\raggedright\beginL %english
+		\footnotesize{\englishfont #3} \endL %english
+	} &
+	\parbox{0.08\textwidth}{\centering \footnotesize{\englishfont #1}} &
+	\parbox{0.45\textwidth}{\normalsize \textbf{#2}}
+	\end{longtable}
+	\addtocounter{verse}{1}
+	\vspace{-14pt}
+}
+
+
+\newcommand{\rashi}[1]{
+	%{\let\thefootnote\relax\blfootnote{\textbf{#1} \textsf{#2}}}
+	\begingroup
+	\renewcommand\thefootnote{}
+	\footnote{\textsf{#1}}
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+\newcommand{\rashiDH}[1]{
+\textrm{#1}
+}
+
+\newcommand{\aliya}[1]{
+\textsf{\raggedleft #1}
+}
+
+\newcommand{\note}[1]{
+	(\textmd{\small #1})}
+\newcommand{\newperek}{
+	\addtocounter{chap}{1}
+	\setcounter{verse}{1}
+	\setcounter{footnote}{0}
+}
+\newcommand{\parshaname}{}
+\newcommand{\newparsha}[1]{
+	\renewcommand{\parshaname}{פרשת #1}
+	%\addchap{\parshaname}
+	\addcontentsline{toc}{chapter}{פרשת #1}	
+	%\vspace{12pt}
+	%\begin{large}\parshaname\end{large}
+	
+}
+\newcommand{\newhaftarah}[1]{
+	\vspace{12pt}
+	\section*{\haftarahname}
+	\addcontentsline{toc}{section}{\haftarahname}
+	\renewcommand{\haftarahname}{הפטרת #1}
+	\vspace{-12pt}
+	\nopagebreak
+}
+%\newcommand{\twoverseinfo}[2]{
+%	\begin{longtable}{m{0.5\textwidth} m{0.5\textwidth}}
+%	\parbox{0.5\textwidth}%english
+%	{\vspace{0pt}\raggedright\beginL %english
+%		\footnotesize{\englishfont #1} \endL %english
+%	} &
+%	\parbox{0.5\textwidth}{\footnotesize{\textsf{#2}}}
+%\end{longtable}
+%\vspace{-14pt}
+%}
+
+\newcommand{\postparshanotes}[2]{
+	\parbox{0.75\textwidth}{\footnotesize{\textsf{ע״כ \parshaname #1}}}
+	\engnote{#2}
+}
+\newcommand{\hebnote}[1]{
+	\parbox{0.75\textwidth}{\centering \footnotesize{\textsf{#1}}}
+}
+\newcommand{\engnote}[1]{
+	\vspace{8pt}
+	\parbox{\textwidth}{\centering \footnotesize{\beginL\englishfont{\textit{#1}}\endL}}
+}
+
+\newcommand{\newsedra}{}
+\newcommand{\qk}[2]{(\textit{כ׳} #2)[\textit{ק׳} #1]}
+\newcommand{\petucha}{(פ) \space}
+\newcommand{\setuma}{(ס) \space}
+\newcommand{\legarmeh}{ ׀ }
+\newcommand{\pasek}{ ׀ }
+\newcommand{\lord}{\textsc{Lord}}
+\newcommand{\englishshem}{\begin{hebrew}יהוה \end{hebrew}}
+\newcommand{\haftarahname}{}
