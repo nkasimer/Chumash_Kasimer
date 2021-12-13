@@ -11,11 +11,7 @@
 \usepackage{array}
 
 %\let\footnoterule\relax
-\renewcommand{\footnoterule}{%
-	\kern -3pt
-	\hrule width \textwidth height 1pt
-	\kern 2pt
-}
+
 \setdefaultlanguage{hebrew}
 \setotherlanguage{english}
 \setmainfont[BoldFont = {Shlomo semiStam}]{Shlomo}
@@ -32,7 +28,7 @@
 	%\marginpar{\raggedleft \footnotesize{\englishfont #5}}
 	%
 	%\begin{longtable}{p{0.05\textwidth} m{0.3\textwidth} m{0.25\textwidth} m{0.3\textwidth} p{0.1\textwidth}}
-	\begin{longtable}{m{0.08\textwidth} m{0.30\textwidth} m{0.25\textwidth} m{0.30\textwidth} m{0.08\textwidth}}
+	\begin{longtable}{m{0.08\textwidth} m{0.30\textwidth} m{0.25\textwidth} m{0.3\textwidth} m{0.08\textwidth}}
 	\parbox{.08\textwidth}{\raggedright \footnotesize{\englishfont #1}} & %right column verse #
 	\parbox{0.3\textwidth} %hebrew
 	{\normalsize \textbf{#2}} &
@@ -99,9 +95,9 @@
 }
 \newcommand{\newhaftarah}[1]{
 	\vspace{12pt}
+	\renewcommand{\haftarahname}{הפטרת #1}
 	\section*{\haftarahname}
 	\addcontentsline{toc}{section}{\haftarahname}
-	\renewcommand{\haftarahname}{הפטרת #1}
 	\vspace{-12pt}
 	\nopagebreak
 }
@@ -137,3 +133,9 @@
 \newcommand{\lord}{\textsc{Lord}}
 \newcommand{\englishshem}{\begin{hebrew}יהוה \end{hebrew}}
 \newcommand{\haftarahname}{}
+
+\renewcommand{\footnoterule}{%
+	\kern -3pt
+	\hrule width \textwidth height 1pt
+	\kern 2pt
+}
