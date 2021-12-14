@@ -7,6 +7,9 @@
 \usepackage{longtable}
 \usepackage{ragged2e}
 \usepackage[marginal]{footmisc}
+%\usepackage[para, bottom, norule]{footmisc}
+%\usepackage{bigfoot}
+%\DeclareNewFootnote[para]{default}
 \usepackage{fontspec}
 \usepackage{array}
 
@@ -41,7 +44,7 @@
  & 
 	\footnotesize{\englishfont \raggedleft #5} %left column verse #
 	\end{longtable}
-\vspace{-14pt}
+\vspace{-16pt}
 	%\\[4pt]
 	\addtocounter{verse}{1}
 	\addtocounter{footnote}{1}
@@ -57,7 +60,7 @@
 	\parbox{0.45\textwidth}{\normalsize \textbf{#2}}
 	\end{longtable}
 	\addtocounter{verse}{1}
-	\vspace{-14pt}
+	\vspace{-16pt}
 }
 
 
@@ -78,7 +81,8 @@
 }
 
 \newcommand{\note}[1]{
-	(\textmd{\small #1})}
+	(\textmd{\footnotesize #1})}
+
 \newcommand{\newperek}{
 	\addtocounter{chap}{1}
 	\setcounter{verse}{1}
