@@ -11,14 +11,13 @@
 %\DeclareNewFootnote[para]{default}
 \usepackage{fontspec}
 \usepackage{array}
-%\usepackage[backend=bibtex,style=authortitle-ibid]{biblatex}
+\usepackage[backend=bibtex,style=authortitle-ibid]{biblatex}
 
 %\let\footnoterule\relax
 
 \setdefaultlanguage{hebrew}
 \setotherlanguage{english}
-%\setmainfont[BoldFont = {Shlomo semiStam}]{Shlomo}
-\setmainfont{Shlomo}
+\setmainfont[BoldFont = {Shlomo semiStam}]{Shlomo}
 %\setmainfont{Taamey Ashkenaz}
 \setsansfont{Mekorot-Rashi}
 \newfontfamily\englishfont{EB Garamond}
@@ -33,21 +32,19 @@
 	%\marginpar{\raggedleft \footnotesize{\englishfont #5}}
 	%
 	%\begin{longtable}{p{0.05\textwidth} m{0.3\textwidth} m{0.25\textwidth} m{0.3\textwidth} p{0.1\textwidth}}
-	\marginpar[\footnotesize{\englishfont \raggedleft #5}]{\raggedright \footnotesize{\englishfont #1}}
 	\vspace{-8pt}
-	%\begin{longtable}{m{0.08\textwidth} m{0.30\textwidth} m{0.25\textwidth} m{0.3\textwidth} m{0.08\textwidth}}
-	\begin{longtable}{m{0.32\textwidth} m{0.28\textwidth} m{0.32\textwidth}}
-	%\parbox{.08\textwidth}{\raggedright \footnotesize{\englishfont #1}} & %right column verse #
-	\parbox{0.32\textwidth} %hebrew
+	\begin{longtable}{m{0.08\textwidth} m{0.30\textwidth} m{0.25\textwidth} m{0.3\textwidth} m{0.08\textwidth}}
+	\parbox{.08\textwidth}{\raggedright \footnotesize{\englishfont #1}} & %right column verse #
+	\parbox{0.3\textwidth} %hebrew
 	{\normalsize \textbf{#2}} &
-	\parbox{0.28\textwidth} %aramaic
+	\parbox{0.25\textwidth} %aramaic
 	{\small #3} & 
-	\parbox{0.32\textwidth} %english
+	\parbox{0.3\textwidth} %english
 	{\vspace{0pt}\raggedright\beginL %english
 		\footnotesize{\englishfont #4} \endL %english
 	}
- %& 
-%	\footnotesize{\englishfont \raggedleft #5} %left column verse #
+ & 
+	\footnotesize{\englishfont \raggedleft #5} %left column verse #
 	\end{longtable}
 \vspace{-8pt}
 	%\\[4pt]
