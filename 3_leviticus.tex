@@ -4,7 +4,7 @@ paperheight=11in,
 paperwidth=8.5in,
 top=0.5in,bottom=0.5in,
 inner=1in,
-outer=1in,
+outer=0.75in,
 marginparsep=0.1in,
 headsep=16pt
 ]{geometry}
@@ -17,21 +17,9 @@ headsep=16pt
 \fancyhead[C]{\texttitle \space\textendash\space \englishfont Introduction}
 
 \begin{document}
-\frontmatter
-\pagenumbering{roman}
-
-\title{\texttitle}
-
-\author{}
-
-\date{}
-
-\maketitle
-
-\tableofcontents
-
+	
 \include{chumash_files/0introduction}
-
+	
 \clearpage
 \mainmatter
 
@@ -44,7 +32,7 @@ headsep=16pt
 \newcounter{sedra}
 \setcounter{sedra}{1}
 
-\include{chumash_files/3exodus_chumash}
+\include{Chumash_files/3Leviticus_chumash}
 \fancyhead[C]{פרשת במדבר למנחה בשבת בחקתי}
 \newparsha{במדבר}
 \setcounter{chap}{1}
