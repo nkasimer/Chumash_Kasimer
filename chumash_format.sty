@@ -45,21 +45,24 @@
 \setlength{\vswide}{0.5in}
 \newlength{\mainwidth}
 \setlength{\mainwidth}{\textwidth}
+\addtolength{\tabcolsep}{-2pt}
 
 \newcommand{\threeverse}[5]{
 	\vspace{-16pt}
 	\begin{adjustwidth*}{-0.6in}{-0.6in}%{inner}{outer} original margins are 1" inner and 0.75" outer, so margins are .4" inner and .15" outer
-	\begin{longtable}[c]{m{0.08\textwidth} m{0.32\textwidth} m{0.28\textwidth} m{0.32\textwidth} m{0.08\textwidth}} 
-	\parbox{.08\textwidth}{\raggedright \footnotesize{\englishfont #1}} & %right column verse #
-	\parbox{0.32\textwidth} %hebrew
+	\begin{longtable}[c]{m{0.08\textwidth} m{0.34\textwidth} m{0.30\textwidth} m{0.30\textwidth} m{0.08\textwidth}} 
+	%\parbox{.08\textwidth}{\raggedright \footnotesize{\englishfont #1}} & %right column verse #
+	\parbox{.08\textwidth}{\raggedright \englishfont \scriptsize #1} & %right column verse #
+	\parbox{0.34\textwidth} %hebrew
 	{\normalsize \textbf{#2}} 
-	&\parbox{0.28\textwidth} %aramaic
+	&\parbox{0.3\textwidth} %aramaic
 	{\small #3}
-	&\parbox{0.32\textwidth} %english
+	&\parbox{0.3\textwidth} %english
 	{\vspace{0pt}\raggedright\beginL %english
 		\footnotesize{\englishfont #4} \endL} %english
 		%{\small \englishfont #4} \endL}
-	&\footnotesize{\englishfont \raggedleft #5} %left column verse #
+	%&\footnotesize{\englishfont \raggedleft #5} %left column verse #.
+	&{\scriptsize \englishfont \raggedleft #5} %left column verse #
 	\end{longtable}
 	\end{adjustwidth*}
 	\vspace{-16pt}
@@ -92,7 +95,7 @@
 }
 
 \newcommand{\rashiDH}[1]{
-\textrm{#1}
+\textrm{\textbf{#1}}
 }
 
 \newcommand{\aliya}[1]{
