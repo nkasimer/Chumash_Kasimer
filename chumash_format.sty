@@ -1,5 +1,6 @@
 \usepackage{fancyhdr}
 \usepackage{titlesec}
+\usepackage{microtype}
 \usepackage{paracol}
 %\usepackage{anyfontsize}
 \usepackage{polyglossia}
@@ -160,7 +161,10 @@
 \newcommand{\setuma}{(ס) \space}
 \newcommand{\legarmeh}{׀ }
 \newcommand{\pasek}{ ׀ }
-\newcommand{\maqqaf}{־}
+\newcommand{\baremaqqaf}{־}
+%\newcommand{\maqqaf}{\baremaqqaf \hspace{-0.5em}\leaders\hbox{\baremaqqaf}\hfill\kern0pt}
+
+\newcommand{\maqqaf}{־\nolinebreak[1]}
 \newcommand{\lord}{\textsc{Lord}}
 \newcommand{\englishshem}{\begin{hebrew}יהוה \end{hebrew}}
 \newcommand{\haftarahname}{}
