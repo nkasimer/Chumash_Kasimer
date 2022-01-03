@@ -1,8 +1,53 @@
-\usepackage[
-coverheight=,
-coverwidth=,
-spinewidth=,
-bleedwidth=,
+\documentclass[
+coverheight=10in,
+coverwidth=7in,
+spinewidth=.75in,
+bleedwidth=.125in,
 12pt,
-pagecolor=,
+pagecolor=blue,
 ]{bookcover}
+
+\usepackage{xcolor}
+\usepackage{polyglossia}
+
+\setdefaultlanguage{english}
+\setotherlanguage{hebrew}
+%\setmainfont[BoldFont = {Shlomo semiStam}]{Shlomo}
+\setmainfont{Shlomo}
+%\setmainfont{Taamey Ashkenaz}
+%\setsansfont{Mekorot-Rashi}
+\newfontfamily\englishfont{EB Garamond}
+
+\newbookcovercomponenttype{center rotate}{
+	\vfill
+	\centering
+	\rotatebox[origin=c]{-90}{#1}
+	\vfill}
+
+\newcommand{\hebtext}[1]{
+\begin{hebrew}
+	#1
+\end{hebrew}
+}
+
+\begin{document}
+	\begin{bookcover}
+	\begin{bookcoverelement}{center rotate}{spine}
+		%\color{yellow!60!black}\huge\sffamily\bfseries
+		\LARGE\textcolor{yellow}{\hebtext{ויקרא ספר} \space Leviticus }
+	\end{bookcoverelement}
+
+	\begin{bookcoverelement}{center}{back}
+		\begin{Huge}
+			\textcolor{yellow}{Leviticus}
+			
+			\textcolor{yellow}{\hebtext{ויקרא ספר}}
+				
+		\end{Huge}
+		\vspace{2\baselineskip}
+		\begin{large}
+			\textcolor{yellow}{A New Edition by Nathan Kasimer\\With the Targum, an English Translation, and Rashi}
+		\end{large}
+	\end{bookcoverelement}
+	\end{bookcover}
+	\end{document}
