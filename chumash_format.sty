@@ -155,6 +155,16 @@
 	\end{minipage}
 }
 
+\newcommand{\haftnote}[1]{
+	\begin{minipage}[t]{\textwidth}
+	\begin{english}\begin{LTR}
+			\centering
+			\footnotesize{\textit{\beginL #1 \endL}}\nopagebreak
+	\end{LTR}\end{english}
+\end{minipage}
+\nopagebreak
+}
+
 \newcommand{\newsedra}{}
 \newcommand{\qk}[2]{(\textit{כ׳} #2)[\textit{ק׳} #1]}
 \newcommand{\petucha}{(פ) \space}
@@ -166,7 +176,7 @@
 
 \newcommand{\maqqaf}{־\nolinebreak[1]}
 \newcommand{\lord}{\textsc{Lord}}
-\newcommand{\englishshem}{\begin{hebrew}יהוה \end{hebrew}}
+\newcommand{\englishshem}{\textsc{Eternal One} }%{\begin{hebrew}יהוה \end{hebrew}}
 \newcommand{\haftarahname}{}
 \newcommand{\verserangechar}{\thinspace \textendash \thinspace}
 \newcommand{\tworange}{\& }
