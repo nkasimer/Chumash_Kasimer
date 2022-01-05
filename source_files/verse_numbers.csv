@@ -1,4 +1,4 @@
-﻿Parsha Num,Parsha,Num vs,,
+Parsha Num,Parsha,Num vs,,
 1,Bereshit,146,,Investigate
 2,Noah,153,"On Rosh \d{H}odesh, read the Maftir and Haftarah on page \pageref{maft_ShabRCh}.",
 3,Lekh Lekha,126,,
@@ -39,9 +39,9 @@
 38,Korach,95,"On Rosh \d{H}odesh, read the Maftir and Haftarah on page \pageref{maft_ShabRCh}.",
 39,Chukath,87,"On Rosh \d{H}odesh, read the Maftir and Haftarah on page \pageref{maft_ShabRCh}.",
 40,Balak,104,,
-41,Pinchas,168,,%first_admonition
-42,Mattoth,112,,%first_admonition
-43,Massey,132,,%trumps RCh
+41,Pinchas,168,"If it is after the 17th of Tammuz, read the Haftarah on page \pageref{haft_42} instead.",%first_admonition
+42,Mattoth,112,This Haftarah is always read the first Shabbat after the 17th of Tammuz.,%first_admonition
+43,Massey,132,"Read this Haftarah even on Rosh \d{H}odesh.  The Rosh \d{H}odesh Maftir is still read, on page \pageref{maft_ShabRCh}.",%trumps RCh
 44,Devarim,105,,
 45, VeEthChanan,122,,
 46, Ekev,111,,
