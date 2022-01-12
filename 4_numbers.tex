@@ -2,7 +2,7 @@
 \usepackage[
 paperheight=10in,
 paperwidth=7in,
-top=0.5in,bottom=0.5in,
+top=0.75in,bottom=0.75in,
 inner=1in,
 outer=0.75in,
 marginparsep=0.1in,
@@ -12,6 +12,7 @@ headsep=16pt
 \usepackage{chumash_format}
 
 \newcommand{\texttitle}{ספר  במדבר}%title_here
+\newcommand{\engtitle}{Numbers}
 
 \fancyfoot[C]{\thepage}
 \fancyhead[C]{\texttitle \space\textendash\space \englishfont Introduction}
@@ -24,7 +25,7 @@ headsep=16pt
 \mainmatter
 
 \pagenumbering{arabic}
-\fancyhead[C]{\texttitle \space\textendash\space \parshaname \space\textendash\space \englishfont \Roman{chap} Numbers}
+\fancyhead[C]{\texttitle \space\textendash\space \parshaname \space\textendash\space \englishfont \Roman{chap} \engtitle}
 \newcounter{chap}
 \setcounter{chap}{1}
 \newcounter{verse}
@@ -76,28 +77,11 @@ headsep=16pt
 \fancyhead[C]{\haftarahname}
 \include{chumash_files/4Numbers_haftarot}
 
-\vspace{12pt}
-\section*{מפטיר לשבת ראש חודש}
-\addcontentsline{toc}{section}{מפטיר לשבת ראש חודש}
-\renewcommand{\haftarahname}{מפטיר לשבת ראש חודש}
-\vspace{-12pt}
-\nopagebreak
-\label{maft_ShabRCh}
-\twoverse{}{\textsf{במדבר כ״ח:ט׳-ט״ו}}{Numbers 28:9-15}
-\nopagebreak
-\setcounter{chap}{28}
-\setcounter{verse}{9}
-\twoverse{\Roman{chap}:\arabic{verse}}{וּבְיוֹם֙ הַשַּׁבָּ֔ת שְׁנֵֽי־כְבָשִׂ֥ים בְּנֵֽי־שָׁנָ֖ה תְּמִימִ֑ם וּשְׁנֵ֣י עֶשְׂרֹנִ֗ים סֹ֧לֶת מִנְחָ֛ה בְּלוּלָ֥ה בַשֶּׁ֖מֶן וְנִסְכּֽוֹ׃}{And on the sabbath day two he-lambs of the first year without blemish, and two tenth parts of an ephah of fine flour for a meal-offering, mingled with oil, and the drink-offering thereof.}
-\twoverse{\arabic{verse}}{עֹלַ֥ת שַׁבַּ֖ת בְּשַׁבַּתּ֑וֹ עַל־עֹלַ֥ת הַתָּמִ֖יד וְנִסְכָּֽהּ׃ \petucha}{This is the burnt-offering of every sabbath, beside the continual burnt-offering, and the drink-offering thereof.}
-\twoverse{\arabic{verse}}{וּבְרָאשֵׁי֙ חׇדְשֵׁיכֶ֔ם תַּקְרִ֥יבוּ עֹלָ֖ה לַיהֹוָ֑ה פָּרִ֨ים בְּנֵֽי־בָקָ֤ר שְׁנַ֙יִם֙ וְאַ֣יִל אֶחָ֔ד כְּבָשִׂ֧ים בְּנֵי־שָׁנָ֛ה שִׁבְעָ֖ה תְּמִימִֽם׃}{And in your new moons ye shall present a burnt-offering unto the \lord: two young bullocks, and one ram, seven he-lambs of the first year without blemish;}
-\twoverse{\arabic{verse}}{וּשְׁלֹשָׁ֣ה עֶשְׂרֹנִ֗ים סֹ֤לֶת מִנְחָה֙ בְּלוּלָ֣ה בַשֶּׁ֔מֶן לַפָּ֖ר הָאֶחָ֑ד וּשְׁנֵ֣י עֶשְׂרֹנִ֗ים סֹ֤לֶת מִנְחָה֙ בְּלוּלָ֣ה בַשֶּׁ֔מֶן לָאַ֖יִל הָֽאֶחָֽד׃}{and three tenth parts of an ephah of fine flour for a meal-offering, mingled with oil, for each bullock; and two tenth parts of fine flour for a meal-offering, mingled with oil, for the one ram;}
-\twoverse{\arabic{verse}}{וְעִשָּׂרֹ֣ן עִשָּׂר֗וֹן סֹ֤לֶת מִנְחָה֙ בְּלוּלָ֣ה בַשֶּׁ֔מֶן לַכֶּ֖בֶשׂ הָאֶחָ֑ד עֹלָה֙ רֵ֣יחַ נִיחֹ֔חַ אִשֶּׁ֖ה לַיהֹוָֽה׃}{and a several tenth part of fine flour mingled with oil for a meal-offering unto every lamb; for a burnt-offering of a sweet savour, an offering made by fire unto the \lord.}
-\twoverse{\arabic{verse}}{וְנִסְכֵּיהֶ֗ם חֲצִ֣י הַהִין֩ יִהְיֶ֨ה לַפָּ֜ר וּשְׁלִישִׁ֧ת הַהִ֣ין לָאַ֗יִל וּרְבִיעִ֥ת הַהִ֛ין לַכֶּ֖בֶשׂ יָ֑יִן זֹ֣את עֹלַ֥ת חֹ֙דֶשׁ֙ בְּחׇדְשׁ֔וֹ לְחׇדְשֵׁ֖י הַשָּׁנָֽה׃}{And their drink-offerings shall be half a hin of wine for a bullock, and the third part of a hin for the ram, and the fourth part of a hin for a lamb. This is the burnt-offering of every new moon throughout the months of the year.}
-\twoverse{\arabic{verse}}{וּשְׂעִ֨יר עִזִּ֥ים אֶחָ֛ד לְחַטָּ֖את לַיהֹוָ֑ה עַל־עֹלַ֧ת הַתָּמִ֛יד יֵעָשֶׂ֖ה וְנִסְכּֽוֹ׃ \setuma }{And one he-goat for a sin-offering unto the \lord; it shall be offered beside the continual burnt-offering, and the drink-offering thereof.}
 \newhaftarah{שבת ראש חודש}
 \label{haft_ShabRCh}
-\twoverse{}{\textsf{ישעיהו ס״ו:א׳-כ״ד}}{Isaiah 66:1-24}
-\nopagebreak
+\haftnote{The Maftir for Shabbat Rosh \d{H}odesh is Numbers 28:9\verserangechar 15. The Haftarah is Isaiah 66:1\verserangechar 24.}
+\setcounter{chap}{66}
+\setcounter{verse}{1}
 \setcounter{chap}{66}
 \setcounter{verse}{1}
 \twoverse{\Roman{chap}:\arabic{verse}}{כֹּ֚ה אָמַ֣ר יְהֹוָ֔ה הַשָּׁמַ֣יִם כִּסְאִ֔י וְהָאָ֖רֶץ הֲדֹ֣ם רַגְלָ֑י אֵי־זֶ֥ה בַ֙יִת֙ אֲשֶׁ֣ר תִּבְנוּ־לִ֔י וְאֵי־זֶ֥ה מָק֖וֹם מְנוּחָתִֽי׃}{Thus saith the \lord: The heaven is My throne, and the earth is My footstool; where is the house that ye may build unto Me? And where is the place that may be My resting-place?}
@@ -126,8 +110,7 @@ headsep=16pt
 \twoverse{\arabic{verse}}{וְיָצְא֣וּ וְרָא֔וּ בְּפִגְרֵי֙ הָאֲנָשִׁ֔ים הַפֹּשְׁעִ֖ים בִּ֑י כִּ֣י תוֹלַעְתָּ֞ם לֹ֣א תָמ֗וּת וְאִשָּׁם֙ לֹ֣א תִכְבֶּ֔ה וְהָי֥וּ דֵרָא֖וֹן לְכׇל־בָּשָֽׂר׃ \small והיה מדי חדש בחדשו ומדי שבת בשבתו יבוא כל בשר להשתחות לפני אמר יהוה\small}{And they shall go forth, and look Upon the carcasses of the men that have rebelled against Me; For their worm shall not die, Neither shall their fire be quenched; And they shall be an abhorring unto all flesh. }
 \newhaftarah{שבת מחר חודש}
 \label{haft_macharchodesh}
-\twoverse{}{\textsf{שמואל א כ׳:י״ח-מ״ב}}{I Samuel 20:18-42}
-\nopagebreak
+\haftnote{The Haftarah for Shabbat Ma\d{h}ar \d{H}odesh is I Samuel 20:18\verserangechar 42.}
 \setcounter{chap}{20}
 \setcounter{verse}{18}
 \twoverse{\Roman{chap}:\arabic{verse}}{וַיֹּאמֶר־ל֥וֹ יְהוֹנָתָ֖ן מָחָ֣ר חֹ֑דֶשׁ וְנִפְקַ֕דְתָּ כִּ֥י יִפָּקֵ֖ד מוֹשָׁבֶֽךָ׃}{And Jonathan said unto him: ‘To-morrow is the new moon; and thou wilt be missed, thy seat will be empty.}
