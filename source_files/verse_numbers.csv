@@ -45,11 +45,11 @@ Parsha Num,Parsha,Num vs,,
 44,Devarim,105,,
 45, VeEthChanan,122,,
 46, Ekev,111,,
-47, Re’eh,126,,"%trumps machar chodesh, not RCh"
+47, Re’eh,126,"On Rosh \d{H}odesh, read the Maftir on page \pageref{maft_ShabRCh}. Most read the Haftarah for Rosh \d{H}odesh when that occurs, but read this Haftarah even on Erev Rosh \d{H}odesh.","%trumps machar chodesh, not RCh"
 48, Shoftim,97,,
-49, Ki Titze,110,,%combo with re'eh if not read
+49, Ki Titze,110,"If the Haftarah from Re'eh was not read because it fell on Rosh \d{H}odesh, combine it with this Haftarah.",%combo with re'eh if not read
 50,Ki Tavo,122,,
-51,Netzavim,30,,%before RH
-52,Vayelech,112,,%shuva
-53,HaAzinu,52,,%between YK and Sukkot
+51,Netzavim,30,This Haftarah is read on the Shabbat before Rosh HaShana.,%before RH
+52,Vayelech,112,This Haftarah is read on Shabbat Shuva.,%shuva
+53,HaAzinu,52,"This Haftarah is read on the Shabbat between Yom Kippur and Sukkot, if there is one.",%between YK and Sukkot
 54,VeZoth HaBerakhah,41,,
