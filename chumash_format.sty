@@ -106,7 +106,7 @@
 }
 
 \newcommand{\aliya}[1]{
-\textsf{\raggedleft #1}
+\hfill\textsf{\raggedleft #1}
 }
 
 \newcommand{\note}[1]{
@@ -176,7 +176,8 @@
 		#1
 	\endL\end{LTR}\end{english}}
 
-\newcommand{\newsedra}{}
+\newcommand{\newseder}{\addtocounter{seder}{1}}
+\newcommand{\seder}[1]{\hfill\begin{hebrew}\footnotesize{\raggedleft #1}\end{hebrew}}
 \newcommand{\qk}[2]{(\textit{כ׳} #2)[\textit{ק׳} #1]}
 \newcommand{\petucha}{(פ) \space}
 \newcommand{\setuma}{(ס) \space}
