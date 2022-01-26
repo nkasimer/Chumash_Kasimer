@@ -25,7 +25,7 @@ headsep=16pt
 \mainmatter
 
 \pagenumbering{arabic}
-\fancyhead[C]{\texttitle \space\textendash\space \parshaname \space\textendash\space \englishfont \Roman{chap} \engtitle}
+\setmainheader
 \newcounter{chap}
 \setcounter{chap}{1}
 \newcounter{verse}
@@ -35,11 +35,11 @@ headsep=16pt
 
 \include{chumash_files/4Numbers_chumash}
 \fancyhead[C]{פרשת דברים למנחה בשבת מסעי}
+\addcontentsline{toc}{chapter}{פרשת דברים למנחה בשבת מסעי}
 \newparsha{דברים}
 \setcounter{chap}{1}
 \setcounter{verse}{1}
-\renewcommand{\aliya}[1]{\textsf{#1}}
-\twoverse{\aliya{דברים}}
+\twoverse{\textsf{דברים}}
 {אֵ֣לֶּה הַדְּבָרִ֗ים אֲשֶׁ֨ר דִּבֶּ֤ר מֹשֶׁה֙ אֶל\maqqaf כׇּל\maqqaf יִשְׂרָאֵ֔ל בְּעֵ֖בֶר הַיַּרְדֵּ֑ן בַּמִּדְבָּ֡ר בָּֽעֲרָבָה֩ מ֨וֹל ס֜וּף בֵּֽין\maqqaf פָּארָ֧ן וּבֵֽין\maqqaf תֹּ֛פֶל וְלָבָ֥ן וַחֲצֵרֹ֖ת וְדִ֥י זָהָֽב׃}
 {THESE ARE the words which Moses spoke unto all Israel beyond the Jordan; in the wilderness, in the Arabah, over against Suph, between Paran and Tophel, and Laban, and Hazeroth, and Di-zahab.}
 \twoverse{\arabic{verse}}
@@ -48,7 +48,7 @@ headsep=16pt
 \twoverse{\arabic{verse}}
 {וַיְהִי֙ בְּאַרְבָּעִ֣ים שָׁנָ֔ה בְּעַשְׁתֵּֽי\maqqaf עָשָׂ֥ר חֹ֖דֶשׁ בְּאֶחָ֣ד לַחֹ֑דֶשׁ דִּבֶּ֤ר מֹשֶׁה֙ אֶל\maqqaf בְּנֵ֣י יִשְׂרָאֵ֔ל כְּ֠כֹ֠ל אֲשֶׁ֨ר צִוָּ֧ה יְהֹוָ֛ה אֹת֖וֹ אֲלֵהֶֽם׃}
 {And it came to pass in the fortieth year, in the eleventh month, on the first day of the month, that Moses spoke unto the children of Israel, according unto all that the \lord\space had given him in commandment unto them;}
-\twoverse{\aliya{לוי}}
+\twoverse{\textsf{לוי}}
 {אַחֲרֵ֣י הַכֹּת֗וֹ אֵ֚ת סִיחֹן֙ מֶ֣לֶךְ הָֽאֱמֹרִ֔י אֲשֶׁ֥ר יוֹשֵׁ֖ב בְּחֶשְׁבּ֑וֹן וְאֵ֗ת ע֚וֹג מֶ֣לֶךְ הַבָּשָׁ֔ן אֲשֶׁר\maqqaf יוֹשֵׁ֥ב בְּעַשְׁתָּרֹ֖ת בְּאֶדְרֶֽעִי׃}
 {after he had smitten Sihon the king of the Amorites, who dwelt in Heshbon, and Og the king of Bashan, who dwelt in Ashtaroth, at Edrei;}
 \twoverse{\arabic{verse}}
@@ -60,7 +60,7 @@ headsep=16pt
 \twoverse{\arabic{verse}}
 {פְּנ֣וּ \legarmeh  וּסְע֣וּ לָכֶ֗ם וּבֹ֨אוּ הַ֥ר הָֽאֱמֹרִי֮ וְאֶל\maqqaf כׇּל\maqqaf שְׁכֵנָיו֒ בָּעֲרָבָ֥ה בָהָ֛ר וּבַשְּׁפֵלָ֥ה וּבַנֶּ֖גֶב וּבְח֣וֹף הַיָּ֑ם אֶ֤רֶץ הַֽכְּנַעֲנִי֙ וְהַלְּבָנ֔וֹן עַד\maqqaf הַנָּהָ֥ר הַגָּדֹ֖ל נְהַר\maqqaf פְּרָֽת׃}
 {turn you, and take your journey, and go to the hill-country of the Amorites and unto all the places nigh thereunto, in the Arabah, in the hill-country, and in the Lowland, and in the South, and by the sea-shore; the land of the Canaanites, and Lebanon, as far as the great river, the river Euphrates.}
-\twoverse{\aliya{ישראל}}
+\twoverse{\textsf{ישראל}}
 {רְאֵ֛ה נָתַ֥תִּי לִפְנֵיכֶ֖ם אֶת\maqqaf הָאָ֑רֶץ בֹּ֚אוּ וּרְשׁ֣וּ אֶת\maqqaf הָאָ֔רֶץ אֲשֶׁ֣ר נִשְׁבַּ֣ע יְ֠הֹוָ֠ה לַאֲבֹ֨תֵיכֶ֜ם לְאַבְרָהָ֨ם לְיִצְחָ֤ק וּֽלְיַעֲקֹב֙ לָתֵ֣ת לָהֶ֔ם וּלְזַרְעָ֖ם אַחֲרֵיהֶֽם׃}
 {Behold, I have set the land before you: go in and possess the land which the \lord\space swore unto your fathers, to Abraham, to Isaac, and to Jacob, to give unto them and to their seed after them.’}
 \twoverse{\arabic{verse}}

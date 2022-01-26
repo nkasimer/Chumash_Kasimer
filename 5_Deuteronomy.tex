@@ -25,7 +25,7 @@ headsep=16pt
 \mainmatter
 
 \pagenumbering{arabic}
-\fancyhead[C]{\texttitle \space\textendash\space \parshaname \space\textendash\space \englishfont \Roman{chap} \engtitle}
+\setmainheader
 \newcounter{chap}
 \setcounter{chap}{1}
 \newcounter{verse}
@@ -131,6 +131,23 @@ headsep=16pt
 \fancyhead[C]{\haftarahname}
 \include{chumash_files/5Deuteronomy_haftarot}
 
+\vspace{12pt}
+\section*{מפטיר לשבת ראש חודש}
+\addcontentsline{toc}{section}{מפטיר לשבת ראש חודש}
+\renewcommand{\haftarahname}{מפטיר לשבת ראש חודש}
+\vspace{-12pt}
+\nopagebreak
+\label{maft_ShabRCh}
+\haftnote{The Maftir for Shabbat Rosh \d{H}odesh is Numbers 28:9\verserangechar 15.}
+\setcounter{chap}{28}
+\setcounter{verse}{9}
+\twoverse{\Roman{chap}:\arabic{verse}}{וּבְיוֹם֙ הַשַּׁבָּ֔ת שְׁנֵֽי־כְבָשִׂ֥ים בְּנֵֽי־שָׁנָ֖ה תְּמִימִ֑ם וּשְׁנֵ֣י עֶשְׂרֹנִ֗ים סֹ֧לֶת מִנְחָ֛ה בְּלוּלָ֥ה בַשֶּׁ֖מֶן וְנִסְכּֽוֹ׃}{And on the sabbath day two he-lambs of the first year without blemish, and two tenth parts of an ephah of fine flour for a meal-offering, mingled with oil, and the drink-offering thereof.}
+\twoverse{\arabic{verse}}{עֹלַ֥ת שַׁבַּ֖ת בְּשַׁבַּתּ֑וֹ עַל־עֹלַ֥ת הַתָּמִ֖יד וְנִסְכָּֽהּ׃ \petucha}{This is the burnt-offering of every sabbath, beside the continual burnt-offering, and the drink-offering thereof.}
+\twoverse{\arabic{verse}}{וּבְרָאשֵׁי֙ חׇדְשֵׁיכֶ֔ם תַּקְרִ֥יבוּ עֹלָ֖ה לַיהֹוָ֑ה פָּרִ֨ים בְּנֵֽי־בָקָ֤ר שְׁנַ֙יִם֙ וְאַ֣יִל אֶחָ֔ד כְּבָשִׂ֧ים בְּנֵי־שָׁנָ֛ה שִׁבְעָ֖ה תְּמִימִֽם׃}{And in your new moons ye shall present a burnt-offering unto the \lord: two young bullocks, and one ram, seven he-lambs of the first year without blemish;}
+\twoverse{\arabic{verse}}{וּשְׁלֹשָׁ֣ה עֶשְׂרֹנִ֗ים סֹ֤לֶת מִנְחָה֙ בְּלוּלָ֣ה בַשֶּׁ֔מֶן לַפָּ֖ר הָאֶחָ֑ד וּשְׁנֵ֣י עֶשְׂרֹנִ֗ים סֹ֤לֶת מִנְחָה֙ בְּלוּלָ֣ה בַשֶּׁ֔מֶן לָאַ֖יִל הָֽאֶחָֽד׃}{and three tenth parts of an ephah of fine flour for a meal-offering, mingled with oil, for each bullock; and two tenth parts of fine flour for a meal-offering, mingled with oil, for the one ram;}
+\twoverse{\arabic{verse}}{וְעִשָּׂרֹ֣ן עִשָּׂר֗וֹן סֹ֤לֶת מִנְחָה֙ בְּלוּלָ֣ה בַשֶּׁ֔מֶן לַכֶּ֖בֶשׂ הָאֶחָ֑ד עֹלָה֙ רֵ֣יחַ נִיחֹ֔חַ אִשֶּׁ֖ה לַיהֹוָֽה׃}{and a several tenth part of fine flour mingled with oil for a meal-offering unto every lamb; for a burnt-offering of a sweet savour, an offering made by fire unto the \lord.}
+\twoverse{\arabic{verse}}{וְנִסְכֵּיהֶ֗ם חֲצִ֣י הַהִין֩ יִהְיֶ֨ה לַפָּ֜ר וּשְׁלִישִׁ֧ת הַהִ֣ין לָאַ֗יִל וּרְבִיעִ֥ת הַהִ֛ין לַכֶּ֖בֶשׂ יָ֑יִן זֹ֣את עֹלַ֥ת חֹ֙דֶשׁ֙ בְּחׇדְשׁ֔וֹ לְחׇדְשֵׁ֖י הַשָּׁנָֽה׃}{And their drink-offerings shall be half a hin of wine for a bullock, and the third part of a hin for the ram, and the fourth part of a hin for a lamb. This is the burnt-offering of every new moon throughout the months of the year.}
+\twoverse{\arabic{verse}}{וּשְׂעִ֨יר עִזִּ֥ים אֶחָ֛ד לְחַטָּ֖את לַיהֹוָ֑ה עַל־עֹלַ֧ת הַתָּמִ֛יד יֵעָשֶׂ֖ה וְנִסְכּֽוֹ׃ \setuma }{And one he-goat for a sin-offering unto the \lord; it shall be offered beside the continual burnt-offering, and the drink-offering thereof.}
 \newhaftarah{שבת ראש חודש}
 \label{haft_ShabRCh}
 \haftnote{The Maftir for Shabbat Rosh \d{H}odesh is Numbers 28:9\verserangechar 15. The Haftarah is Isaiah 66:1\verserangechar 24.}

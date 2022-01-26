@@ -25,7 +25,7 @@ headsep=16pt
 \mainmatter
 
 \pagenumbering{arabic}
-\fancyhead[C]{\texttitle \space\textendash\space \parshaname \space\textendash\space \englishfont \Roman{chap} \engtitle}
+\setmainheader
 \newcounter{chap}
 \setcounter{chap}{1}
 \newcounter{verse}
@@ -35,11 +35,11 @@ headsep=16pt
 
 \include{chumash_files/1Genesis_chumash}
 \fancyhead[C]{פרשת שמות למנחה בשבת ויחי}
+\addcontentsline{toc}{chapter}{פרשת שמות למנחה בשבת ויחי}
 \newparsha{שמות}
 \setcounter{chap}{1}
 \setcounter{verse}{1}
-\renewcommand{\aliya}[1]{\textsf{#1}}
-\twoverse{\aliya{שמות}}
+\twoverse{\textsf{שמות}}
 {וְאֵ֗לֶּה שְׁמוֹת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל הַבָּאִ֖ים מִצְרָ֑יְמָה אֵ֣ת יַעֲקֹ֔ב אִ֥ישׁ וּבֵית֖וֹ בָּֽאוּ׃}
 {NOW THESE are the names of the sons of Israel, who came into Egypt with Jacob; every man came with his household:}
 \twoverse{\arabic{verse}}
@@ -63,7 +63,7 @@ headsep=16pt
 \twoverse{\arabic{verse}}
 {וַיָּ֥קׇם מֶֽלֶךְ\maqqaf חָדָ֖שׁ עַל\maqqaf מִצְרָ֑יִם אֲשֶׁ֥ר לֹֽא\maqqaf יָדַ֖ע אֶת\maqqaf יוֹסֵֽף׃}
 {Now there arose a new king over Egypt, who knew not Joseph.}
-\twoverse{\aliya{לוי}}
+\twoverse{\textsf{לוי}}
 {וַיֹּ֖אמֶר אֶל\maqqaf עַמּ֑וֹ הִנֵּ֗ה עַ֚ם בְּנֵ֣י יִשְׂרָאֵ֔ל רַ֥ב וְעָצ֖וּם מִמֶּֽנּוּ׃}
 {And he said unto his people: ‘Behold, the people of the children of Israel are too many and too mighty for us;}
 \twoverse{\arabic{verse}}
@@ -75,7 +75,7 @@ headsep=16pt
 \twoverse{\arabic{verse}}
 {וְכַאֲשֶׁר֙ יְעַנּ֣וּ אֹת֔וֹ כֵּ֥ן יִרְבֶּ֖ה וְכֵ֣ן יִפְרֹ֑ץ וַיָּקֻ֕צוּ מִפְּנֵ֖י בְּנֵ֥י יִשְׂרָאֵֽל׃}
 {But the more they afflicted them, the more they multiplied and the more they spread abroad. And they were adread because of the children of Israel.}
-\twoverse{\aliya{ישראל}}
+\twoverse{\textsf{ישראל}}
 {וַיַּעֲבִ֧דוּ מִצְרַ֛יִם אֶת\maqqaf בְּנֵ֥י יִשְׂרָאֵ֖ל בְּפָֽרֶךְ׃}
 {And the Egyptians made the children of Israel to serve with rigour.}
 \twoverse{\arabic{verse}}
@@ -195,6 +195,15 @@ headsep=16pt
 \twoverse{\arabic{verse}}{כֶּ֤סֶף אָשָׁם֙ וְכֶ֣סֶף חַטָּא֔וֹת לֹ֥א יוּבָ֖א בֵּ֣ית יְהֹוָ֑ה לַכֹּהֲנִ֖ים יִֽהְיֽוּ׃ \petucha}{The forfeit money, and the sin money, was not brought into the house of the \lord; it was the priests.}
 \vspace{12pt}
 
-
+\vspace{12pt}
+\section*{מפטיר לשבת חנכה}
+\addcontentsline{toc}{section}{מפטיר לשבת חנכה}
+\renewcommand{\haftarahname}{מפטיר לשבת חנכה}
+\vspace{-12pt}
+\nopagebreak
+\label{maft_chanukkah}
+\haftnote{The Maftir for Shabbat \d{H}anukka corresponds to the day of \d{H}anukka...}
+\setcounter{chap}{1}
+\setcounter{verse}{1}
 
 \end{document}

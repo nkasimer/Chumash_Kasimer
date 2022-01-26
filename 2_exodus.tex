@@ -25,7 +25,7 @@ headsep=16pt
 \mainmatter
 
 \pagenumbering{arabic}
-\fancyhead[C]{\texttitle \space\textendash\space \parshaname \space\textendash\space \englishfont \Roman{chap} \engtitle}
+\setmainheader
 \newcounter{chap}
 \setcounter{chap}{1}
 \newcounter{verse}
@@ -35,22 +35,22 @@ headsep=16pt
 
 \include{chumash_files/2exodus_chumash}
 \fancyhead[C]{פרשת ויקרא למנחה בשבת פקודי}
+\addcontentsline{toc}{chapter}{פרשת ויקרא למנחה בשבת פקודי}
 \newparsha{ויקרא}
-\renewcommand{\aliya}[1]{\textsf{#1}}
 \setcounter{chap}{1}
 \setcounter{verse}{1}
-\twoverse{\aliya{ויקרא}}
-{וַיִּקְרָ֖\footnotesize{א} אֶל־מֹשֶׁ֑ה וַיְדַבֵּ֤ר יְהֹוָה֙ אֵלָ֔יו מֵאֹ֥הֶל מוֹעֵ֖ד לֵאמֹֽר׃}{And the \lord\space called unto Moses, and spoke unto him out of the tent of meeting, saying:}
+\twoverse{\textsf{ויקרא}}
+{וַיִּקְרָ֖\footnotesize{א}\normalsize\space אֶל־מֹשֶׁ֑ה וַיְדַבֵּ֤ר יְהֹוָה֙ אֵלָ֔יו מֵאֹ֥הֶל מוֹעֵ֖ד לֵאמֹֽר׃}{And the \lord\space called unto Moses, and spoke unto him out of the tent of meeting, saying:}
 \twoverse{\arabic{verse}}{דַּבֵּ֞ר אֶל־בְּנֵ֤י יִשְׂרָאֵל֙ וְאָמַרְתָּ֣ אֲלֵהֶ֔ם אָדָ֗ם כִּֽי־יַקְרִ֥יב מִכֶּ֛ם קׇרְבָּ֖ן לַֽיהֹוָ֑ה מִן־הַבְּהֵמָ֗ה מִן־הַבָּקָר֙ וּמִן־הַצֹּ֔אן תַּקְרִ֖יבוּ אֶת־קׇרְבַּנְכֶֽם׃}{Speak unto the children of Israel, and say unto them: When any man of you bringeth an offering unto the \lord, ye shall bring your offering of the cattle, even of the herd or of the flock.}
 \twoverse{\arabic{verse}}{אִם־עֹלָ֤ה קׇרְבָּנוֹ֙ מִן־הַבָּקָ֔ר זָכָ֥ר תָּמִ֖ים יַקְרִיבֶ֑נּוּ אֶל־פֶּ֜תַח אֹ֤הֶל מוֹעֵד֙ יַקְרִ֣יב אֹת֔וֹ לִרְצֹנ֖וֹ לִפְנֵ֥י יְהֹוָֽה׃}{If his offering be a burnt-offering of the herd, he shall offer it a male without blemish; he shall bring it to the door of the tent of meeting, that he may be accepted before the \lord.}
 \twoverse{\arabic{verse}}{וְסָמַ֣ךְ יָד֔וֹ עַ֖ל רֹ֣אשׁ הָעֹלָ֑ה וְנִרְצָ֥ה ל֖וֹ לְכַפֵּ֥ר עָלָֽיו׃}{And he shall lay his hand upon the head of the burnt-offering; and it shall be accepted for him to make atonement for him.}
-\twoverse{\aliya{לוי}}
+\twoverse{\textsf{לוי}}
 {וְשָׁחַ֛ט אֶת־בֶּ֥ן הַבָּקָ֖ר לִפְנֵ֣י יְהֹוָ֑ה וְ֠הִקְרִ֠יבוּ בְּנֵ֨י אַהֲרֹ֤ן הַכֹּֽהֲנִים֙ אֶת־הַדָּ֔ם וְזָרְק֨וּ אֶת־הַדָּ֤ם עַל־הַמִּזְבֵּ֙חַ֙ סָבִ֔יב אֲשֶׁר־פֶּ֖תַח אֹ֥הֶל מוֹעֵֽד׃}{And he shall kill the bullock before the \lord; and Aaron’s sons, the priests, shall present the blood, and dash the blood round about against the altar that is at the door of the tent of meeting.}
 \twoverse{\arabic{verse}}{וְהִפְשִׁ֖יט אֶת־הָעֹלָ֑ה וְנִתַּ֥ח אֹתָ֖הּ לִנְתָחֶֽיהָ׃}{And he shall flay the burnt-offering, and cut it into its pieces.}
 \twoverse{\arabic{verse}}{וְ֠נָתְנ֠וּ בְּנֵ֨י אַהֲרֹ֧ן הַכֹּהֵ֛ן אֵ֖שׁ עַל־הַמִּזְבֵּ֑חַ וְעָרְכ֥וּ עֵצִ֖ים עַל־הָאֵֽשׁ׃}{And the sons of Aaron the priest shall put fire upon the altar, and lay wood in order upon the fire.}
 \twoverse{\arabic{verse}}{וְעָרְכ֗וּ בְּנֵ֤י אַהֲרֹן֙ הַכֹּ֣הֲנִ֔ים אֵ֚ת הַנְּתָחִ֔ים אֶת־הָרֹ֖אשׁ וְאֶת־הַפָּ֑דֶר עַל־הָעֵצִים֙ אֲשֶׁ֣ר עַל־הָאֵ֔שׁ אֲשֶׁ֖ר עַל־הַמִּזְבֵּֽחַ׃}{And Aaron’s sons, the priests, shall lay the pieces, and the head, and the suet, in order upon the wood that is on the fire which is upon the altar;}
 \twoverse{\arabic{verse}}{וְקִרְבּ֥וֹ וּכְרָעָ֖יו יִרְחַ֣ץ בַּמָּ֑יִם וְהִקְטִ֨יר הַכֹּהֵ֤ן אֶת־הַכֹּל֙ הַמִּזְבֵּ֔חָה עֹלָ֛ה אִשֵּׁ֥ה רֵֽיחַ־נִיח֖וֹחַ לַֽיהֹוָֽה׃ \setuma }{but its inwards and its legs shall he wash with water; and the priest shall make the whole smoke on the altar, for a burnt-offering, an offering made by fire, of a sweet savour unto the \lord.}
-\twoverse{\aliya{ישראל}}
+\twoverse{\textsf{ישראל}}
 {וְאִם־מִן־הַצֹּ֨אן קׇרְבָּנ֧וֹ מִן־הַכְּשָׂבִ֛ים א֥וֹ מִן־הָעִזִּ֖ים לְעֹלָ֑ה זָכָ֥ר תָּמִ֖ים יַקְרִיבֶֽנּוּ׃}{And if his offering be of the flock, whether of the sheep, or of the goats, for a burnt-offering, he shall offer it a male without blemish.}
 \twoverse{\arabic{verse}}{וְשָׁחַ֨ט אֹת֜וֹ עַ֣ל יֶ֧רֶךְ הַמִּזְבֵּ֛חַ צָפֹ֖נָה לִפְנֵ֣י יְהֹוָ֑ה וְזָרְק֡וּ בְּנֵי֩ אַהֲרֹ֨ן הַכֹּהֲנִ֧ים אֶת־דָּמ֛וֹ עַל־הַמִּזְבֵּ֖חַ סָבִֽיב׃}{And he shall kill it on the side of the altar northward before the \lord; and Aaron’s sons, the priests, shall dash its blood against the altar round about.}
 \twoverse{\arabic{verse}}{וְנִתַּ֤ח אֹתוֹ֙ לִנְתָחָ֔יו וְאֶת־רֹאשׁ֖וֹ וְאֶת־פִּדְר֑וֹ וְעָרַ֤ךְ הַכֹּהֵן֙ אֹתָ֔ם עַל־הָֽעֵצִים֙ אֲשֶׁ֣ר עַל־הָאֵ֔שׁ אֲשֶׁ֖ר עַל־הַמִּזְבֵּֽחַ׃}{And he shall cut it into its pieces; and the priest shall lay them, with its head and its suet, in order on the wood that is on the fire which is upon the altar.}

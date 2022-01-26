@@ -25,21 +25,23 @@ headsep=16pt
 \mainmatter
 
 \pagenumbering{arabic}
-\fancyhead[C]{\texttitle \space\textendash\space \parshaname \space\textendash\space \englishfont \Roman{chap} \engtitle}
+\setmainheader
 \newcounter{chap}
 \setcounter{chap}{1}
 \newcounter{verse}
 \setcounter{verse}{1}
 \newcounter{seder}
-\setcounter{seder}{1}
+\setcounter{seder}{0}
 
 \include{chumash_files/3Leviticus_chumash}
+\addcontentsline{toc}{chapter}{פרשת במדבר למנחה בשבת בחקתי}
 \fancyhead[C]{פרשת במדבר למנחה בשבת בחקתי}
+
 \newparsha{במדבר}
 \setcounter{chap}{1}
 \setcounter{verse}{1}
-%\renewcommand{\aliya}[1]{\textsf{#1}}
-\twoverse{\aliya{במדבר}}
+\renewcommand{\aliya}[1]{\textsf{#1}}
+\twoverse{\textsf{במדבר}}
 {וַיְדַבֵּ֨ר יְהֹוָ֧ה אֶל־מֹשֶׁ֛ה בְּמִדְבַּ֥ר סִינַ֖י בְּאֹ֣הֶל מוֹעֵ֑ד בְּאֶחָד֩ לַחֹ֨דֶשׁ הַשֵּׁנִ֜י בַּשָּׁנָ֣ה הַשֵּׁנִ֗ית לְצֵאתָ֛ם מֵאֶ֥רֶץ מִצְרַ֖יִם לֵאמֹֽר׃}
 {AND THE \lord\space spoke unto Moses in the wilderness of Sinai, in the tent of meeting, on the first day of the second month, in the second year after the were come out of the land of Egypt, saying:}
 \twoverse{\arabic{verse}}
@@ -51,7 +53,7 @@ headsep=16pt
 \twoverse{\arabic{verse}}
 {וְאִתְּכֶ֣ם יִהְי֔וּ אִ֥ישׁ אִ֖ישׁ לַמַּטֶּ֑ה אִ֛ישׁ רֹ֥אשׁ לְבֵית־אֲבֹתָ֖יו הֽוּא׃}
 {And with you there shall be a man of every tribe, every one head of his fathers’ house.}
-\twoverse{\aliya{לוי}}
+\twoverse{\textsf{לוי}}
 {וְאֵ֙לֶּה֙ שְׁמ֣וֹת הָֽאֲנָשִׁ֔ים אֲשֶׁ֥ר יַֽעַמְד֖וּ אִתְּכֶ֑ם לִרְאוּבֵ֕ן אֱלִיצ֖וּר בֶּן־שְׁדֵיאֽוּר׃}
 {And these are the names of the men that shall stand with you: of Reuben, Elizur the son of Shedeur.}
 \twoverse{\arabic{verse}}
@@ -87,7 +89,7 @@ headsep=16pt
 \twoverse{\arabic{verse}}
 {אֵ֚לֶּה \qk{קְרוּאֵ֣י}{קריאי} הָעֵדָ֔ה נְשִׂיאֵ֖י מַטּ֣וֹת אֲבוֹתָ֑ם רָאשֵׁ֛י אַלְפֵ֥י יִשְׂרָאֵ֖ל הֵֽם׃}
 {These were the elect of the congregation, the princes of the tribes of their fathers; they were the heads of the thousands of Israel.}
-\twoverse{\aliya{ישראל}}
+\twoverse{\textsf{ישראל}}
 {וַיִּקַּ֥ח מֹשֶׁ֖ה וְאַהֲרֹ֑ן אֵ֚ת הָאֲנָשִׁ֣ים הָאֵ֔לֶּה אֲשֶׁ֥ר נִקְּב֖וּ בְּשֵׁמֹֽת׃\note{בספרי ספרד ואשכנז בְּשֵׁמֽוֹת}}
 {And Moses and Aaron took these men that are pointed out by name.}
 \twoverse{\arabic{verse}}
