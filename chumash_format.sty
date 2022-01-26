@@ -176,7 +176,9 @@
 		#1
 	\endL\end{LTR}\end{english}}
 
-\newcommand{\newseder}{\addtocounter{seder}{1}}
+\newcommand{\sedernumber}{0}
+\newcommand{\newseder}[1]{\addtocounter{seder}{1}\renewcommand{\sedernumber}{#1}}
+\newcommand{\sedername}{סדר \hebrewnumeral{\sedernumber}}
 \newcommand{\seder}[1]{\hfill\begin{hebrew}\footnotesize{\raggedleft #1}\end{hebrew}}
 \newcommand{\qk}[2]{(\textit{כ׳} #2)[\textit{ק׳} #1]}
 \newcommand{\petucha}{(פ) \space}
@@ -192,5 +194,7 @@
 \newcommand{\haftarahname}{}
 \newcommand{\verserangechar}{\thinspace \textendash \thinspace}
 \newcommand{\tworange}{\& }
+
+\newcommand{\setmainheader}{\fancyhead[C]{\texttitle \space\textendash\space \parshaname \space\textendash\space \sedername \space\textendash\space \englishfont \Roman{chap} \engtitle}}
 
 \let\footnoterule\relax
