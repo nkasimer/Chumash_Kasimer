@@ -31,11 +31,12 @@ headsep=16pt
 \newcounter{verse}
 \setcounter{verse}{1}
 \newcounter{seder}
-\setcounter{seder}{1}
+\setcounter{seder}{0}
 
 \include{chumash_files/2exodus_chumash}
 \fancyhead[C]{פרשת ויקרא למנחה בשבת פקודי}
 \newparsha{ויקרא}
+\renewcommand{\aliya}[1]{\textsf{#1}}
 \setcounter{chap}{1}
 \setcounter{verse}{1}
 \twoverse{\aliya{ויקרא}}

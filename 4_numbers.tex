@@ -31,14 +31,15 @@ headsep=16pt
 \newcounter{verse}
 \setcounter{verse}{1}
 \newcounter{seder}
-\setcounter{seder}{1}
+\setcounter{seder}{0}
 
 \include{chumash_files/4Numbers_chumash}
 \fancyhead[C]{פרשת דברים למנחה בשבת מסעי}
 \newparsha{דברים}
 \setcounter{chap}{1}
 \setcounter{verse}{1}
-\twoverse{\aliya{כהן}}
+\renewcommand{\aliya}[1]{\textsf{#1}}
+\twoverse{\aliya{דברים}}
 {אֵ֣לֶּה הַדְּבָרִ֗ים אֲשֶׁ֨ר דִּבֶּ֤ר מֹשֶׁה֙ אֶל\maqqaf כׇּל\maqqaf יִשְׂרָאֵ֔ל בְּעֵ֖בֶר הַיַּרְדֵּ֑ן בַּמִּדְבָּ֡ר בָּֽעֲרָבָה֩ מ֨וֹל ס֜וּף בֵּֽין\maqqaf פָּארָ֧ן וּבֵֽין\maqqaf תֹּ֛פֶל וְלָבָ֥ן וַחֲצֵרֹ֖ת וְדִ֥י זָהָֽב׃}
 {THESE ARE the words which Moses spoke unto all Israel beyond the Jordan; in the wilderness, in the Arabah, over against Suph, between Paran and Tophel, and Laban, and Hazeroth, and Di-zahab.}
 \twoverse{\arabic{verse}}
