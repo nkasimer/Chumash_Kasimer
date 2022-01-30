@@ -2,18 +2,20 @@
 \usepackage{titlesec}
 \usepackage{microtype}
 \usepackage{paracol}
+\usepackage{fontspec}
 %\usepackage{anyfontsize}
 \usepackage{polyglossia}
 \usepackage{multicol}
 \usepackage{longtable}
 \usepackage{ragged2e}
-\usepackage[marginal]{footmisc}
+%\usepackage[marginal]{footmisc}
 %\usepackage{bigfoot}
 %\DeclareNewFootnote[para]{default}
 \usepackage{fontspec}
 \usepackage{array}
 \usepackage{changepage}
 \usepackage{hyperref}
+\usepackage[osf]{ebgaramond}
 %\usepackage[RTLdocument]{bidi}
 %\usepackage[backend=bibtex,style=authortitle-ibid]{biblatex}
 
@@ -36,18 +38,6 @@
 \pagestyle{fancy}
 \fancyhf{}
 
-%\makeatletter
-%\newenvironment{widetable}
-%{\table
-%	\advance\hsize\marginparwidth
-%	\advance\hsize\marginparsep
-%	\@parboxrestore}
-%{\endtable}
-%\makeatother
-
-%\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
-%\let\endchangemargin=\endlist 
-
 \newlength{\vswide}
 \setlength{\vswide}{0.5in}
 \newlength{\mainwidth}
@@ -58,18 +48,16 @@
 	\vspace{-16pt}
 	\begin{adjustwidth*}{-0.6in}{-0.6in}%{inner}{outer} original margins are 1" inner and 0.75" outer, so margins are .4" inner and .15" outer
 	\begin{longtable}[c]{m{0.08\textwidth} m{0.34\textwidth} m{0.30\textwidth} m{0.30\textwidth} m{0.08\textwidth}} 
-	%\parbox{.08\textwidth}{\raggedright \footnotesize{\englishfont #1}} & %right column verse #
 	\parbox{.08\textwidth}{\raggedright \englishfont \scriptsize #1} & %right column verse #
 	\parbox{0.34\textwidth} %hebrew
 	{\normalsize \textbf{#2}} 
-	&\parbox{0.3\textwidth} %aramaic
+	& \parbox{0.3\textwidth} %aramaic
 	{\small #3}
-	&\parbox{0.3\textwidth} %english
+	& \parbox{0.3\textwidth} %english
 	{\vspace{0pt}\raggedright\beginL %english
 		\footnotesize{\englishfont #4} \endL} %english
-		%{\small \englishfont #4} \endL}
-	%&\footnotesize{\englishfont \raggedleft #5} %left column verse #.
-	&{\scriptsize \englishfont \raggedleft #5} %left column verse #
+
+	& {\scriptsize \englishfont \raggedleft #5} %left column verse #
 	\end{longtable}
 	\end{adjustwidth*}
 	\vspace{-16pt}
@@ -94,8 +82,8 @@
 \newcommand{\rashi}[1]{
 	\renewcommand\thefootnote{}
 	\addtocounter{verse}{-1}
-	\footnote{
-	\raisebox{1pt}{\scriptsize \textbf{(\arabic{verse})}}\space
+	\footnote{\hspace{-1em}
+	\raisebox{0.5pt}{\scriptsize \textbf{(\arabic{verse})}}\space
 	\textsf{#1}}
 	\vspace{-12pt}
 	\addtocounter{verse}{1}
@@ -124,7 +112,12 @@
 	\addcontentsline{toc}{chapter}{פרשת #1}	
 	%\vspace{12pt}
 	%\begin{large}\parshaname\end{large}
-	
+	\setcounter{aliya}{1}
+}
+\newcommand{\aliyaname}{ראשון}
+\newcommand{\aliyacounter}[1]{
+\renewcommand{\aliyaname}{#1}
+\addtocounter{aliya}{1}
 }
 \newcommand{\newhaftarah}[1]{
 	\vspace{12pt}
@@ -146,9 +139,6 @@
 %}
 
 \newcommand{\engnote}[1]{
-	%\noindent\makebox[\textwidth][c]{
-%	\begin{minipage}[t]{0.9\textwidth}\centering
-%\begin{adjustwidth*}{-0.6in}{-0.6in}
 \nopagebreak
 \begin{longtable}{m{0.15\textwidth} m{0.85\textwidth}}
 	\parbox{0.15\textwidth}{}
@@ -157,9 +147,7 @@
 		\footnotesize{\textit{\beginL #1 \endL}}
 		\end{LTR}\end{english}}
 \end{longtable}
-%\end{adjustwidth*}
 }
-	%\end{minipage}}
 
 \newcommand{\haftnote}[1]{
 	\begin{minipage}[t]{\textwidth}
@@ -196,6 +184,18 @@
 \newcommand{\verserangechar}{\thinspace \textendash \thinspace}
 \newcommand{\tworange}{\& }
 
-\newcommand{\setmainheader}{\fancyhead[C]{\texttitle \space\textendash\space \parshaname \space\textendash\space \sedername \space\textendash\space \englishfont \Roman{chap} \engtitle}}
+\newcommand{\setmainheader}{
+\fancyhead[CE]{\texttitle \space\textendash\space \parshaname \space\textendash\space \sedername \space\textendash\space \englishfont \Roman{chap} \engtitle}
+\fancyhead[CO]{\texttitle \space\textendash\space \parshaname \space\textendash\space \aliyaname \space\textendash\space \englishfont \Roman{chap} \engtitle}
+}
 
 \let\footnoterule\relax
+
+\newcounter{chap}
+\setcounter{chap}{1}
+\newcounter{verse}
+\setcounter{verse}{1}
+\newcounter{seder}
+\setcounter{seder}{0}
+\newcounter{aliya}
+\setcounter{aliya}{0}
