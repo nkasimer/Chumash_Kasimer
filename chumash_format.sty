@@ -15,6 +15,7 @@
 \usepackage{array}
 \usepackage{changepage}
 \usepackage{hyperref}
+\usepackage{setspace}
 %\usepackage[RTLdocument]{bidi}
 %\usepackage[backend=bibtex,style=authortitle-ibid]{biblatex}
 
@@ -46,11 +47,11 @@
 \newcommand{\threeverse}[5]{
 	\vspace{-16pt}
 	\begin{adjustwidth*}{-0.6in}{-0.6in}%{inner}{outer} original margins are 1" inner and 0.75" outer, so margins are .4" inner and .15" outer
-		\begin{longtable}[c]{m{0.08\textwidth} m{0.34\textwidth} m{0.30\textwidth} m{0.30\textwidth} m{0.08\textwidth}} 
+		\begin{longtable}[c]{m{0.08\textwidth} m{0.34\textwidth} m{0.32\textwidth} m{0.32\textwidth} m{0.08\textwidth}} 
 			%\parbox{.08\textwidth}{\raggedright \footnotesize{\englishfont #1}} & %right column verse #
 			\parbox{.08\textwidth}{\raggedright \englishfont \scriptsize #1} & %right column verse #
 			\parbox{0.34\textwidth} %hebrew
-			{\normalsize \textbf{#2}} 
+			{\normalsize \textbf{\setstretch{1.1}#2}} 
 			&\parbox{0.3\textwidth} %aramaic
 			{\small #3}
 			&\parbox{0.3\textwidth} %english
