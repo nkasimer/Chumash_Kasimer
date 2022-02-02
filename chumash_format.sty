@@ -3,7 +3,6 @@
 \usepackage{microtype}
 \usepackage{paracol}
 \usepackage{fontspec}
-%\usepackage{anyfontsize}
 \usepackage{polyglossia}
 \usepackage{multicol}
 \usepackage{longtable}
@@ -16,6 +15,7 @@
 \usepackage{changepage}
 \usepackage{hyperref}
 \usepackage{setspace}
+\usepackage{ebgaramond}
 %\usepackage[RTLdocument]{bidi}
 %\usepackage[backend=bibtex,style=authortitle-ibid]{biblatex}
 
@@ -27,7 +27,14 @@
 \setmainfont{Shlomo}
 %\setmainfont{Taamey Ashkenaz}
 \setsansfont{Mekorot-Rashi}
-\newfontfamily\englishfont[Numbers={OldStyle,Proportional},CharacterVariant=11,RawFeature={+liga,+clig,+hlig,+dlig,+calt}]{EB Garamond}
+%\newfontfamily\englishfont[Numbers={OldStyle,Proportional},RawFeature={+liga,+clig,+dlig,+calt}]{EB Garamond}
+\newfontfamily\englishfont{EBGaramond}[
+Path=./EBGaramond-0.016/otf/,
+Extension=.otf,
+UprightFont=*08-Regular,
+ItalicFont=*08-Italic,
+RawFeature={+cv11,+liga,+clig,+dlig,+calt}
+]
 
 %\twocolumnfootnotes
 %\RTLcolumnfootnotes
@@ -51,7 +58,7 @@
 			%\parbox{.08\textwidth}{\raggedright \footnotesize{\englishfont #1}} & %right column verse #
 			\parbox{.08\textwidth}{\raggedright \englishfont \scriptsize #1} & %right column verse #
 			\parbox{0.34\textwidth} %hebrew
-			{\normalsize \textbf{\setstretch{1.1}#2}} 
+			{\normalsize \textbf{\setstretch{1.2}#2}} 
 			&\parbox{0.3\textwidth} %aramaic
 			{\small #3}
 			&\parbox{0.3\textwidth} %english
@@ -75,7 +82,7 @@
 		\footnotesize{\englishfont #3} \endL %english
 	} &
 	\parbox{0.08\textwidth}{\centering \scriptsize{\englishfont #1}} &
-	\parbox{0.45\textwidth}{\normalsize \textbf{#2}}
+	\parbox{0.45\textwidth}{\normalsize \textbf{\setstretch{1.2} #2}}
 	\end{longtable}
 	\addtocounter{verse}{1}
 	\vspace{-16pt}
@@ -146,7 +153,7 @@
 	\parbox{0.15\textwidth}{}
 	&\parbox{0.85\textwidth}{
 		\begin{english}\begin{LTR}\centering
-		\footnotesize{\textit{\beginL #1 \endL}}
+		\footnotesize{\textit{\beginL \addfontfeatures{RawFeature=+swsh} #1 \endL}}
 		\end{LTR}\end{english}}
 \end{longtable}
 }
@@ -155,7 +162,7 @@
 	\begin{minipage}[t]{\textwidth}
 	\begin{english}\begin{LTR}
 			\centering
-			\footnotesize{\textit{\beginL #1 \endL}}\nopagebreak
+			\footnotesize{\textit{\beginL \addfontfeatures{RawFeature=+swsh} #1 \endL}}\nopagebreak
 	\end{LTR}\end{english}
 \end{minipage}
 \nopagebreak
@@ -171,7 +178,7 @@
 \newcommand{\newseder}[1]{\addtocounter{seder}{1}\renewcommand{\sedernumber}{#1}}
 \newcommand{\sedername}{סדר \hebrewnumeral{\sedernumber}}
 \newcommand{\seder}[1]{\hfill\begin{hebrew}\footnotesize{\raggedleft #1}\end{hebrew}}
-\newcommand{\qk}[2]{(\textit{כ׳} #2)[\textit{ק׳} #1]}
+\newcommand{\qk}[2]{(\textsf{כ׳} #2)[\textsf{ק׳} #1]}
 \newcommand{\petucha}{(פ) \space}
 \newcommand{\setuma}{(ס) \space}
 \newcommand{\legarmeh}{׀ }
@@ -185,13 +192,14 @@
 \newcommand{\haftarahname}{}
 \newcommand{\verserangechar}{\thinspace \textendash \thinspace}
 \newcommand{\tworange}{\& }
+\newcommand{\firstletter}[1]{\textin{\LARGE #1}}
 
 \newcommand{\setmainheader}{
 \fancyhead[CE]{\texttitle \space\textendash\space \parshaname \space\textendash\space \sedername \space\textendash\space \englishfont \Roman{chap} \engtitle}
 \fancyhead[CO]{\texttitle \space\textendash\space \parshaname \space\textendash\space \aliyaname \space\textendash\space \englishfont \Roman{chap} \engtitle}
 }
 
-\fancyfoot[C]{\thepage}
+\fancyfoot[C]{\englishfont \Large \thepage}
 
 \let\footnoterule\relax
 
