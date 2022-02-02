@@ -6,6 +6,7 @@ bleedwidth=.75in,
 marklength=0in,
 12pt,
 pagecolor=darkblue,
+trimmed
 ]{bookcover}
 
 \usepackage{polyglossia}
@@ -41,7 +42,7 @@ pagecolor=darkblue,
 		%\color{yellow!60!black}\huge\sffamily\bfseries
 		\LARGE\textcolor{gold}{\hebtext{ויקרא ספר} \space Leviticus }
 	\end{bookcoverelement}
-	\begin{bookcoverelement}{normal}{bg spine bottom}
+	\begin{bookcoverelement}{normal}{bg spine bottom}[0.1\spinewidth,0in,0.1\spinewidth,0in]
 	\includegraphics[width=0.8\spinewidth,height=0.8\spinewidth]{kasimer_logo.png}
 	\end{bookcoverelement}
 %	\begin{bookcoverelement}{center}{bg spine bottom}
