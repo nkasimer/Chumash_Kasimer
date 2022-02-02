@@ -27,7 +27,7 @@
 \setmainfont{Shlomo}
 %\setmainfont{Taamey Ashkenaz}
 \setsansfont{Mekorot-Rashi}
-\newfontfamily\englishfont[Numbers={OldStyle}]{EB Garamond}
+\newfontfamily\englishfont[Numbers={OldStyle,Proportional},CharacterVariant=11,RawFeature={+liga,+clig,+hlig,+dlig,+calt}]{EB Garamond}
 
 %\twocolumnfootnotes
 %\RTLcolumnfootnotes
@@ -190,6 +190,8 @@
 \fancyhead[CE]{\texttitle \space\textendash\space \parshaname \space\textendash\space \sedername \space\textendash\space \englishfont \Roman{chap} \engtitle}
 \fancyhead[CO]{\texttitle \space\textendash\space \parshaname \space\textendash\space \aliyaname \space\textendash\space \englishfont \Roman{chap} \engtitle}
 }
+
+\fancyfoot[C]{\thepage}
 
 \let\footnoterule\relax
 
