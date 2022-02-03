@@ -1,0 +1,39 @@
+\documentclass{article}
+
+\usepackage{bigfoot}
+\usepackage{marginnote}
+\usepackage[
+paperheight=9.68in,
+paperwidth=7.44in,
+top=0.75in,bottom=0.75in,
+inner=1in,
+outer=.75in,
+marginparsep=0.1in,
+headsep=16pt
+]{geometry}
+\usepackage[marginal]{footmisc}
+\usepackage{changepage}
+
+\newcommand{\commenthead}[1]{\textbf{#1}\\}
+
+\DeclareNewFootnote{Rashi}[alph]
+\newcommand{\rashi}[1]{\setcounter{footnoteRashi}{-1}\footnoteRashi{#1}}
+\renewcommand{\footnoterule}{\commenthead{Rashi}}
+
+\SelectFootnoteRule[1]{comm2}[\commenthead{Shadal}]
+\DeclareNewFootnote{Shadal}[alph]
+\newcommand{\shadal}[1]{\setcounter{footnoteShadal}{-1}\noindent\footnoteShadal{#1}}
+
+\DeclareNewFootnote{IbnEzra}[alph]
+\newcommand{\ibnezra}[1]{\setcounter{footnoteIbnEzra}{-1}\footnoteIbnEzra{#1}}
+\renewcommand{\extrafootnoterule}{\commenthead{Ibn Ezra}}
+
+\begin{document}
+	\begin{adjustwidth*}{1.5in}{1.5in}
+	Test\marginnote{Marginal material} test test\\
+	\reversemarginpar\marginnote{Other marginal material} Queue\rashi{Footnote 1 is very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long}\shadal{Footnote A}\ibnezra{Footnote I}\\
+	Blah blah blah\\
+	1234567890\shadal{Footnote 2}\rashi{Footnote B is much shorter than footnote A.}\ibnezra{Footnote II}
+	\\
+	\end{adjustwidth*}
+\end{document}
