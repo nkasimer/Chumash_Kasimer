@@ -6,7 +6,6 @@ bleedwidth=.75in,
 marklength=0in,
 12pt,
 pagecolor=darkblue,
-trimmed
 ]{bookcover}
 
 \usepackage{polyglossia}
@@ -25,7 +24,7 @@ trimmed
 \newbookcovercomponenttype{center rotate}{
 	\vfill
 	\centering
-	\rotatebox[origin=c]{-90}{#1}
+	\rotatebox[origin=c]{90}{#1}
 	\vfill}
 
 \letnamebookcoverpart{bg spine bottom}{bg spine}[,,,\partheight-\bleedwidth-\spinewidth]
