@@ -81,7 +81,7 @@ RawFeature={+cv11,+liga,+clig,+dlig,+calt}
 		\footnotesize{\englishfont #3} \endL %english
 	} &
 	\parbox{0.08\textwidth}{\centering \scriptsize{\englishfont #1}} &
-	\parbox{0.45\textwidth}{\normalsize \textbf{\setstretch{1.2} #2}}
+	\parbox{0.45\textwidth}{\normalsize\textbf{\setstretch{1.2}#2}}
 	\end{longtable}
 	\addtocounter{verse}{1}
 	\vspace{-16pt}
@@ -157,7 +157,7 @@ RawFeature={+cv11,+liga,+clig,+dlig,+calt}
 	\parbox{0.15\textwidth}{}
 	&\parbox{0.85\textwidth}{
 		\begin{english}\begin{LTR}\centering
-		\footnotesize{\textit{\beginL \addfontfeatures{RawFeature=+swsh} #1 \endL}}
+		\footnotesize{\textit{\beginL #1 \endL}}
 		\end{LTR}\end{english}}
 \end{longtable}
 }
@@ -166,7 +166,7 @@ RawFeature={+cv11,+liga,+clig,+dlig,+calt}
 	\begin{minipage}[t]{\textwidth}
 	\begin{english}\begin{LTR}
 			\centering
-			\footnotesize{\textit{\beginL \addfontfeatures{RawFeature=+swsh} #1 \endL}}\nopagebreak
+			\footnotesize{\textit{\beginL #1 \endL}}\nopagebreak
 	\end{LTR}\end{english}
 \end{minipage}
 \nopagebreak

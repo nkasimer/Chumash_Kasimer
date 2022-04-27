@@ -1,5 +1,5 @@
 Parsha Num,Parsha,Num vs,,
-1,Bereshit,146,,Investigate
+1,Bereshit,146,"On Erev Rosh \d{H}odesh, some read the Haftara on page \pageref{haft_macharchodesh}, while some read the Parsha’s Haftara even on Erev Rosh \d{H}odesh.",Investigate
 2,Noah,153,"On Rosh \d{H}odesh, read the Maftir and Haftara on page \pageref{maft_ShabRCh}.",
 3,Lekh Lekha,126,,
 4,VaYera,147,,
