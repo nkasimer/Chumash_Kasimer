@@ -1,11 +1,12 @@
 {
-    "status": "locked",
-    "versionTitle": "Rashi Chumash, Metsudah Publications, 2009",
-    "license": "CC-BY",
     "language": "he",
     "title": "Rashi on Deuteronomy",
     "versionSource": "http://primo.nli.org.il/primo_library/libweb/action/dlDisplay.do?vid=NLI&docId=NNL_ALEPH002691623",
+    "versionTitle": "Rashi Chumash, Metsudah Publications, 2009",
+    "status": "locked",
     "priority": 2.0,
+    "license": "CC-BY",
+    "shortVersionTitle": "Metsudah Publications, 2009",
     "heTitle": "רש\"י על דברים",
     "categories": [
         "Tanakh",
