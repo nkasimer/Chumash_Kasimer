@@ -20,6 +20,9 @@
 %\usepackage[backend=bibtex,style=authortitle-ibid]{biblatex}
 \usepackage{dblfnote}
 
+\usepackage[backend=bibtex,style=authortitle]{biblatex}
+\bibliography{halakhot_sources}
+
 %\let\footnoterule\relax
 
 \setdefaultlanguage{hebrew}
@@ -50,6 +53,7 @@ RawFeature={+cv11,+liga,+clig,+dlig,+calt}
 \newlength{\mainwidth}
 \setlength{\mainwidth}{\textwidth}
 \addtolength{\tabcolsep}{-2pt}
+\newcommand{\LTRmark}{‎}
 
 \newcommand{\threeverse}[5]{
 	\vspace{-16pt}
@@ -110,6 +114,8 @@ RawFeature={+cv11,+liga,+clig,+dlig,+calt}
 \hfill\textsf{\raggedleft \hebrewnumeral{#1}}\hfill\newline
 \hfill\textsf{\raggedleft פסוקים}\hfill
 }
+
+\newcommand{\engitem}[1]{\englishcontent{\textbullet\quad \parbox[t]{0.75\textwidth}{\englishfont\beginL\raggedleft #1 \endL}\\}\vspace{0.25\baselineskip}}
 
 \newcommand{\note}[1]{
 	(\textmd{\footnotesize #1})}
@@ -179,6 +185,13 @@ RawFeature={+cv11,+liga,+clig,+dlig,+calt}
 		#1
 	\endL\end{LTR}\end{english}}
 
+\newcommand{\englishcontent}[1]{
+{\beginL\englishfont{\raggedright #1\hfill}\LTRmark\endL}}
+
+\newcommand{\engsection}[1]{\begin{english}\beginL\englishfont \section*{#1} \endL\end{english}}
+
+\newcommand{\hebword}[1]{‎\begin{hebrew}\beginR #1 \endR\end{hebrew}}
+
 \newcommand{\sedernumber}{0}
 \newcommand{\newseder}[1]{\addtocounter{seder}{1}\renewcommand{\sedernumber}{#1}}
 \newcommand{\sedername}{סדר \hebrewnumeral{\sedernumber}}
@@ -228,4 +241,23 @@ RawFeature={+cv11,+liga,+clig,+dlig,+calt}
 \begin{center}\LARGE
 	חזק חזק ונתחזק
 \end{center}
+}
+
+\newcommand{\englishinst}[1]{
+	\begin{minipage}{\textwidth}
+		\begin{english}\raggedright\centering
+			\begin{footnotesize}\textit{#1}
+				
+				\vspace{2pt}
+			\end{footnotesize}
+		\end{english}
+	\end{minipage}
+}
+
+\newcommand{\kahal}{\textsf{\footnotesize קהל׃}\space}
+
+\newcommand{\enginline}[1]{
+	\begin{large}
+		\englishcontent{\textit{#1}}
+	\end{large}
 }
